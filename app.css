@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+:root {
+    --color: rgb(39, 174, 96);
+    --transition-time: 0.5s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color);
+    transition: all calc(var(--transition-time) * 2);
+}
+
+#quote-box {
+    max-height: 100rem;
+    width: 45rem;
+    padding: 4rem 5rem;
+    color: var(--color);
+    background-color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    transition: all var(--transition-time * 2);
+}
+
+#text {
+    font-size: 2.8rem;
+    font-weight: 500;
+    display: flex;
+    gap: 1.4rem;
+    opacity: 0;
+    transition: all var(--transition-time) ease-in-out;
+}
+
+#author {
+    align-self: flex-end;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: all var(--transition-time) ease-in-out;
+}
+
+#text.active,
+#author.active {
+    opacity: 1;
+}
+
+.bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.share-links {
+    display: flex;
+    gap: 0.5rem;
+}
+.share-link {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.3rem;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--color);
+}
+
+#new-quote {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: white;
+    background-color: var(--color);
+    cursor: pointer;
+    user-select: none;
+}
+
+#new-quote,
+.share-link {
+    transition: all calc(var(--transition-time) * 2);
+}
